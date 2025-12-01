@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Audit Trail Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Mini Audit Trail Generator</h1>
+    <p>
+      Enter any text, click <strong>Save Version</strong>.
+      Each change creates an audit trail entry.
+    </p>
+
+    <textarea
+      id="textInput"
+      rows="8"
+      placeholder="Type your content here..."
+    ></textarea>
+
+    <div class="actions">
+      <button id="saveBtn">Save Version</button>
+      <span id="status"></span>
+    </div>
+
+    <h2>Change History (Audit Trail)</h2>
+    <table id="versionsTable">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Old Length</th>
+          <th>New Length</th>
+          <th>Added Words</th>
+          <th>Removed Words</th>
+        </tr>
+      </thead>
+      <tbody id="versionsBody">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
